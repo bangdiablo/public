@@ -22,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'khej+zz(e$jac@!p!ctp1ehzyhrlpc@yw1vh0s4ko9apd@$88^'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dbox-dev.net', 'reseller.dbox-dev.net']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 CORS_ALLOW_HEADERS = default_headers + (
     'X-BOX-ACCESSTOKEN',
@@ -123,10 +123,10 @@ DATABASES = {
             'read_default_file': './db.cnf',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
-        'NAME': 'dbbox',  # DB명
-        'USER': 'legal',  # 데이터베이스 계정
-        'PASSWORD': 'wise0699',  # 계정 비밀번호
-        'HOST': 'test-dbbox-aurora.cluster-cseekqks7k0p.ap-northeast-2.rds.amazonaws.com',
+        'NAME': '',  # DB명
+        'USER': '',  # 데이터베이스 계정
+        'PASSWORD': '',  # 계정 비밀번호
+        'HOST': '',
         # 데이테베이스 주소(IP)
         # 'HOST': 'localhost',  # 데이테베이스 주소(IP)
         'PORT': '3306',  # 데이터베이스 포트(보통은 3306)
@@ -138,10 +138,10 @@ DATABASES = {
             'read_default_file': './db.cnf',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
-        'NAME': 'dbbox',  # DB명
-        'USER': 'legal',  # 데이터베이스 계정
-        'PASSWORD': 'wise0699',  # 계정 비밀번호
-        'HOST': 'test-dbbox-aurora.cluster-ro-cseekqks7k0p.ap-northeast-2.rds.amazonaws.com',
+        'NAME': '',  # DB명
+        'USER': 'l',  # 데이터베이스 계정
+        'PASSWORD': '',  # 계정 비밀번호
+        'HOST': '',
         # 데이테베이스 주소(IP)
         # 'HOST': 'localhost',  # 데이테베이스 주소(IP)
         'PORT': '3306',  # 데이터베이스 포트(보통은 3306)
@@ -214,16 +214,14 @@ DISCONNECT_TIME = 20
 # Email
 # TODO : 해당 user, password는 localhost에서는 유효하지만 test server에서 이메일 발송이 안 됨. 해당 API 이용 url 등록을 해야할 듯.
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
+EMAIL_HOST = ''
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "AKIA4WZI5LKEILPLZUUL"
-EMAIL_HOST_PASSWORD = 'BG7gyvEVslxtBzR8GGvQ4Q79C6ujOi2KVzjgU4EYu1By'
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'admin_dkeiyaku@aos.com'
-SERVER_EMAIL = 'admin_dkeiyaku@aos.com'
+DEFAULT_FROM_EMAIL = ''
+SERVER_EMAIL = ''
 
-MAIL_TEMPLATE_SERVER_URL = "http://dbox-dev.net"
-RESELLER_MAIL_TEMPLATE_SERVER_URL = "http://reseller.dbox-dev.net"
 
 
 # logging
@@ -260,10 +258,10 @@ LOGGING = {
     },
 }
 
-S3_BUCKET_NAME = "storage-service-s3"
+S3_BUCKET_NAME = ""
 
-S3_REGION_NAME = 'ap-northeast-2'
-S3_ACCESS_ID = "AKIASF4FLQWTR6IW3G3W"
-S3_ACCESS_KEY = "oHoSEL1QU8tLZE4cgVXTAj7QiZ9P0zWHV3QArYpL"
+S3_REGION_NAME = ''
+S3_ACCESS_ID = ""
+S3_ACCESS_KEY = ""
 
 USER_TEMP_DIR_PATH = os.path.join(BASE_DIR, "/static/temp")
