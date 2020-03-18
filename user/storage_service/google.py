@@ -43,8 +43,8 @@ from google.auth.transport.requests import Request
 from apiclient import discovery, errors
 
 # 클라이언트 ID, client_secret 설정
-CLIENT_ID = "709956208735-djf9haapuhi2qn89ancedvkmlkbi8rer.apps.googleusercontent.com"
-CLIENT_SECRET = "ztyrSUKTAqMWB7WQbR3AB_fK"
+CLIENT_ID = "m"
+CLIENT_SECRET = "K"
 
 # https://developers.google.com/drive/api/v2/about-auth
 SCOPES = ["https://www.googleapis.com/auth/drive.file"]
